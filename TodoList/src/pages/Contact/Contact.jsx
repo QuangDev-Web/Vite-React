@@ -1,5 +1,5 @@
 import React from 'react';
-import DefaultLayout from '../../layouts/DefaultLayout';
+import DefaultLayout from '../../layouts/defaultLayout/DefaultLayout';
 import './Contact.scss';
 
 const Contact = () => {

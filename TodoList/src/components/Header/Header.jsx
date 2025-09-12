@@ -13,6 +13,8 @@ const Header = () => {
                     <li><a href="/">Trang chủ</a></li>
                     <li><a href="/about">Giới thiệu</a></li>
                     <li><a href="/contact">Liên hệ</a></li>
+                    <li><a href="/login">Đăng Nhập</a></li>
+                    <li><a href="/register">Đăng Kí</a></li>
                 </ul>
             </nav>
         </header>
