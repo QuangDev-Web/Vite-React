@@ -23,3 +23,6 @@ npm i sass
 3, Mixin & Function (tái sử dụng code)
 4, Kế thừa (Inheritance)
 5, Quản lý file tốt hơn (Modular)
+----------------------------------------------------------------------
+B1: Tạo Header và Footer và các file scss đi kèm
+
