@@ -15,6 +15,7 @@ const Header = () => {
                     <li><a href="/contact">Liên hệ</a></li>
                     <li><a href="/login">Đăng Nhập</a></li>
                     <li><a href="/register">Đăng Kí</a></li>
+                    <li><a href="/dashboard">Dashboard</a></li>
                 </ul>
             </nav>
         </header>
