@@ -42,6 +42,10 @@
                 &:hover {
                     color: color.adjust(white, $lightness: 20%);
                 }
+
+                &.active {
+                    border-bottom: 2px solid yellow;
+                }
             }
         }
     }

@@ -1,6 +1,6 @@
 
 import './Header.scss';
-
+import { Link, NavLink } from 'react-router-dom';
 const Header = () => {
     return (
         <header className="header">
@@ -10,12 +10,12 @@ const Header = () => {
 
             <nav className="header__nav">
                 <ul>
-                    <li><a href="/">Trang chủ</a></li>
-                    <li><a href="/about">Giới thiệu</a></li>
-                    <li><a href="/contact">Liên hệ</a></li>
-                    <li><a href="/login">Đăng Nhập</a></li>
-                    <li><a href="/register">Đăng Kí</a></li>
-                    <li><a href="/dashboard">Dashboard</a></li>
+                    <li><NavLink to="/">Trang chủ</NavLink></li>
+                    <li><NavLink to="/about">Giới thiệu</NavLink></li>
+                    <li><NavLink to="/contact">Liên hệ</NavLink></li>
+                    <li><NavLink to="/login">Đăng Nhập</NavLink></li>
+                    <li><NavLink to="/register">Đăng Kí</NavLink></li>
+                    <li><NavLink to="/dashboard">Dashboard</NavLink></li>
                 </ul>
             </nav>
         </header>
