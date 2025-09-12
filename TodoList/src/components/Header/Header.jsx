@@ -1,7 +1,17 @@
-
 import './Header.scss';
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useNavigate } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
+import { logout } from '../../features/auth/authSlice';
+
 const Header = () => {
+    const { isAuthenticated, user } = useSelector((state) => state.auth);
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
+
+    const handleLogout = () => {
+        dispatch(logout());
+        navigate('/login');
+    };
     return (
         <header className="header">
             <div className="header__logo">
@@ -15,9 +25,19 @@ const Header = () => {
                     <li><NavLink to="/contact">Liên hệ</NavLink></li>
                     <li><NavLink to="/login">Đăng Nhập</NavLink></li>
                     <li><NavLink to="/register">Đăng Kí</NavLink></li>
-                    <li><NavLink to="/dashboard">Dashboard</NavLink></li>
+                    {isAuthenticated && <li><NavLink to="/dashboard">Dashboard</NavLink></li>}
                 </ul>
             </nav>
+            <div className="header__auth">
+                {isAuthenticated ? (
+                    <>
+                        <span>Xin chào, {user.name}</span>
+                        <button onClick={handleLogout}>Logout</button>
+                    </>
+                ) : (
+                    <NavLink to="/login">Login</NavLink>
+                )}
+            </div>
         </header>
     );
 };

@@ -1,8 +1,10 @@
 import { createSlice } from '@reduxjs/toolkit';
 
+// Đọc user từ localStorage nếu có
+const savedUser = JSON.parse(localStorage.getItem('user'));
 const initialState = {
-    isAuthenticated: false, // mặc định chưa login
-    user: null,
+    isAuthenticated: !!savedUser, // mặc định chưa login
+    user: savedUser || null,
 };
 
 const authSlice = createSlice({
@@ -12,10 +14,14 @@ const authSlice = createSlice({
         loginSuccess: (state, action) => {
             state.isAuthenticated = true;
             state.user = action.payload;
+            // Lưu vào localStorage
+            localStorage.setItem('user', JSON.stringify(action.payload));
         },
         logout: (state) => {
             state.isAuthenticated = false;
             state.user = null;
+            // Xóa khỏi localStorage
+            localStorage.removeItem('user');
         },
     },
 });
