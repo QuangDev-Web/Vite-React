@@ -1,7 +1,8 @@
-@import "../../styles/variables";
+@use "../../styles/variables";
+@use "sass:color";
 
 .footer {
-    background-color: darken($primary-color, 10%);
+    background-color: color.adjust(variables.$primary-color, $lightness: 10%);
     color: white;
     padding: 20px 40px;
     margin-top: 40px;
@@ -30,7 +31,7 @@
                 transition: color 0.3s;
 
                 &:hover {
-                    color: lighten(white, 20%);
+                    color: color.adjust(variables.$primary-color, $lightness: -10%);
                 }
             }
         }

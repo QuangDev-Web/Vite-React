@@ -24,5 +24,12 @@ npm i sass
 4, Kế thừa (Inheritance)
 5, Quản lý file tốt hơn (Modular)
 ----------------------------------------------------------------------
+            Tạo các component cơ bản
 B1: Tạo Header và Footer và các file scss đi kèm
+B2: Tạo DefaultLayout và Trang Home
+----------------------------------------------------------------------
+            Tạo Nhiều Trang và Chức năng chuyển trang
+B1: npm install react-router-dom      
+
+
 
