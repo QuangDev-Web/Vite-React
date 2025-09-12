@@ -1,0 +1,38 @@
+@import "../../styles/variables";
+
+.footer {
+    background-color: darken($primary-color, 10%);
+    color: white;
+    padding: 20px 40px;
+    margin-top: 40px;
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+
+        p {
+            margin: 0;
+        }
+
+        .footer__links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            margin: 0;
+            padding: 0;
+
+            li a {
+                color: white;
+                text-decoration: none;
+                font-size: 0.9rem;
+                transition: color 0.3s;
+
+                &:hover {
+                    color: lighten(white, 20%);
+                }
+            }
+        }
+    }
+}
