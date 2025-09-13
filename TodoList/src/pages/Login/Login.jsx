@@ -9,6 +9,7 @@ const Login = () => {
     const navigate = useNavigate();
 
     const handleFakeLogin = (e) => {
+        console.log('login')
         e.preventDefault();
 
         // fake user data
